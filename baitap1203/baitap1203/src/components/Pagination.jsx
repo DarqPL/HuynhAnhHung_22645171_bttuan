@@ -6,7 +6,7 @@ const Pagination = () => {
             <img src='/src/assets/211689_left_arrow_icon.png' className='w-[20px]' />
             <div className='flex gap-2 items-center'>
                 {[1, 2, 3, 4, 5].map(item => (
-                    <div className={`cursor-pointer p-2 rounded-md border border-[#424955FF] ${item == 1 ? " text-white bg-[#F44B87FF]" : 'text-[#424955FF] bg-white'}`} key={item}>
+                    <div className={`cursor-pointer p-2 rounded-md border border-gray ${item == 1 ? " text-white bg-main" : 'text-gray bg-white'}`} key={item}>
                         {item}
                     </div>
                 ))}
