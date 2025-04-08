@@ -34,7 +34,12 @@ const TableData = ({ data }) => {
         ),
         1: (companyName) => <p className="text-md">{companyName}</p>,
         2: (orderValue) => <p className="text-md">{orderValue}</p>,
-        3: (orderDate) => <p className="text-md">{orderDate}</p>,
+        3: (orderDate) => {
+          const date = new Date(orderDate);
+          const formattedDate = date.toLocaleDateString("en-GB");
+          return <p className="text-md">{formattedDate}</p>;
+        },
+        
         4: (status) => {
           const displayStatus = status
             ? "Completed"
